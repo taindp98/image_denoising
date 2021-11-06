@@ -16,6 +16,6 @@ def add_noisy(img, var=None):
     noisy = img + gauss
     return noisy, gauss
 
-def transform_wavelet(spatial):
-    coeffs2 = pywt.dwt2(spatial, 'db2')
+def transform_wavelet(spatial, algo = 'db2'):
+    coeffs2 = pywt.dwt2(spatial, algo)
     return coeffs2
